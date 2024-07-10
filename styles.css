@@ -1,1 +1,47 @@
 /*  your css code here. If applicable */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+	text-align: center;
+}
+#verification_heading{
+	margin-bottom: 25px;
+}
+
+#verification_subtext{
+	margin-bottom: 40px;
+}
+
+.code-container{
+	display: flex;
+	height: 135px;
+	gap: 10px;
+}
+
+.code{
+	width: 30%;
+	cursor: none;
+	pointer-events: none;
+	text-align: center;
+	font-size: 70px;
+}
+
+.code:focus{
+	outline: none;
+}
+
+.code:nth-child(1){
+	cursor: pointer;
+	pointer-events: all;
+}
