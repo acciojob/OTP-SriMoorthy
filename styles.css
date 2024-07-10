@@ -1,47 +1,46 @@
 /*  your css code here. If applicable */
-*{
-	margin: 0;
-	padding: 0;
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
 }
 
-body{
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.verification-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.container{
-	text-align: center;
-}
-#verification_heading{
-	margin-bottom: 25px;
+#verification_heading {
+    margin-bottom: 10px;
 }
 
-#verification_subtext{
-	margin-bottom: 40px;
+#verification_subtext {
+    margin-bottom: 20px;
 }
 
-.code-container{
-	display: flex;
-	height: 135px;
-	gap: 10px;
+.code-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.code{
-	width: 30%;
-	cursor: none;
-	pointer-events: none;
-	text-align: center;
-	font-size: 70px;
+.code {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.code:focus{
-	outline: none;
-}
-
-.code:nth-child(1){
-	cursor: pointer;
-	pointer-events: all;
+.design-note {
+    color: #888;
+    font-size: 12px;
 }
