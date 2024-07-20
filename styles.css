@@ -1,20 +1,20 @@
-/*  your css code here. If applicable */
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
     margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
 
-.verification-container {
-    background-color: #fff;
+.container {
+    text-align: center;
     padding: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 #verification_heading {
@@ -23,24 +23,28 @@ body {
 
 #verification_subtext {
     margin-bottom: 20px;
+    color: #666;
 }
 
 .code-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
 .code {
     width: 40px;
-    height: 40px;
-    font-size: 18px;
+    height: 50px;
     text-align: center;
+    font-size: 24px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.design-note {
-    color: #888;
-    font-size: 12px;
+.code:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
