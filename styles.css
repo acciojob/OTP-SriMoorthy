@@ -16,8 +16,8 @@
     border: 1px solid gray;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-.code:focus{
-    border: 2px solid #000;
+.focused{
+    border: 2px solid #2baa1a;
     border-radius: 10px;
     outline: none;
 }
