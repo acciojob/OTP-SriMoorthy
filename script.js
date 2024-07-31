@@ -1,26 +1,35 @@
-let codes = document.querySelectorAll(".code")
-// change, input
-codes.forEach((code,index)=>{
+let codes = document.querySelectorAll(".code");
+
+// Change, input
+codes.forEach((code, index) => {
     
-    code.addEventListener("input",()=>{
-        if(code.value.length == 1){
-             if(index < codes.length-1){
-                   codes[index+1].focus()
-                   codes[index+1].classList.add("focused")
-             }
+    code.addEventListener("input", () => {
+        if (code.value.length === 1) {
+            if (index < codes.length - 1) {
+                setTimeout(() => {
+                    codes[index + 1].focus();
+                    codes[index + 1].classList.add("focused");
+                }, 0); // Ensure focus change is handled asynchronously
+            }
         }
-    })
-    // keyup, keydown(press)
-    code.addEventListener("keydown",(e)=>{
-        if(e.key == "Backspace"){
-              if(index > 0 && code.value.length == 0){
-                
-                codes[index-1].focus()
-                codes[index-1].classList.add("focused")
-              }
+    });
+
+    // Keydown (press)
+    code.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace") {
+            if (code.value.length === 0) {
+                if (index > 0) {
+                    setTimeout(() => {
+                        codes[index - 1].focus();
+                        codes[index - 1].classList.add("focused");
+                    }, 0); // Ensure focus change is handled asynchronously
+                }
+            }
         }
-    })
-    code.addEventListener("blur", ()=>{
-          code.classList.remove("focused")
-    })
-})
+    });
+
+    // Blur
+    code.addEventListener("blur", () => {
+        code.classList.remove("focused");
+    });
+});
